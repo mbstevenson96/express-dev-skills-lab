@@ -43,12 +43,37 @@ function show(req, res) {
   })
 }
 
-function deleteTodo(req, res) {
+function deleteSkill(req, res) {
   Skill.findByIdAndDelete(req.params.id)
   .then(skill => {
     res.redirect('/skills')
   })
   .catch(error => {
+    console.log(error)
+    res.redirect('/skills')
+  })
+}
+
+function edit(req, res) {
+  Skill.findById(req.params.id)
+  .then(skill => {
+    res.render('skills/edit', {
+      skill: skill
+    })
+  })
+  .catch(error => { 
+    console.log(error)
+    res.redirect('/skills')
+  })
+}
+
+function update(req, res) {
+  req.body.done = !!req.body.done
+  Skill.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  .then(skill => {
+    res.redirect(`/skills/${skill._id}`)
+  })
+  .catch(error => { 
     console.log(error)
     res.redirect('/skills')
   })
@@ -60,5 +85,7 @@ function deleteTodo(req, res) {
     newSkill as new,
     create,
     show,
-    deleteTodo as delete,
+    deleteSkill as delete,
+    edit,
+    update,
   }

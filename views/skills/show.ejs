@@ -9,6 +9,7 @@
 </head>
 <body>
   <h1>Skill Record</h1>
+  <a href="/skills/<%= skill._id %>/edit">Update Skill</a>
   <h2>Skill #<%= skill._id %></h2>
   <h3><%= skill.text %></h3>
   <p>Skill Level: <%= skill.done ? 'Rockstar' : 'Not a Rockstar' %></p>
