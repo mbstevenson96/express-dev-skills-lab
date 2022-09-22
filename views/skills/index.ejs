@@ -12,9 +12,9 @@
   <ul>
     <% skills.forEach(skill => { %>
       <li>
-        <%= skill.skill %>
+        <a href="/skills/<%= skill._id %>"><%= skill.text %></a>
         -
-        <%= skill.rockstar ? 'Rockstar' : 'Not a Rockstar' %>  
+        <%= skill.done ? 'Rockstar' : 'Not a Rockstar' %>  
       </li>
     <% }) %> 
   </ul>

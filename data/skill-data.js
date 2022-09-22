@@ -1,8 +1,8 @@
 const skills = [
-  {skill: "Painting", rockstar: false},
-  {skill: "Good Music Taste", rockstar: true},
-  {skill: "Dog Training", rockstar: true},
-  {skill: "Surfing", rockstar: false},
+  {text: "Painting", done: false},
+  {text: "Good Music Taste", done: true},
+  {text: "Dog Training", done: true},
+  {text: "Surfing", done: false},
 ]
 
 export {
