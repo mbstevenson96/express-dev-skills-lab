@@ -4,14 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>New Chore</title>
+  <title>Chore Details</title>
 </head>
 <body>
-  <h1>New Chore</h1>
-  <form action="/chores" method="POST" autocomplete="off">
-    <input type="text" name="chore">
-    <button type="submit">Add New Chore</button>
-  </form>
+  <h1>Chore Details</h1>
+  <h3>Chore #<%= chore._id %></h3>
+  <h4><%= chore.chore %></h4>
+  <p>Complete: <%= chore.done ? 'Yes' : 'No' %></p>
   <a href="/chores">Go Back</a>
 </body>
 </html>

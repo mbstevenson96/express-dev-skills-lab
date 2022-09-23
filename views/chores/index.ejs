@@ -11,7 +11,7 @@
   <ul>
     <% chores.forEach(chore => { %>
       <li>
-        <%= chore.chore %>
+        <a href="/chores/<%= chore._id %>"><%= chore.chore %></a>
         -
         <%= chore.done ? 'Yes' : 'No' %>
       </li>

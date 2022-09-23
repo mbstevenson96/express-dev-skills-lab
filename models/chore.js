@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 
 const choreSchema = new Schema({
   chore: String,
-  done: Boolean
+  done: Boolean,
 })
 
 const Chore = mongoose.model('Chore', choreSchema)

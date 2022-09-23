@@ -6,6 +6,11 @@ const router = Router()
 
 router.get('/', choresCtrl.index)
 router.get('/new', choresCtrl.new)
+router.get('/:id', choresCtrl.show)
+router.get('/:id', choresCtrl.show)
+
+
+router.post('/', choresCtrl.create)
 
 
 
