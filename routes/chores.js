@@ -9,8 +9,9 @@ router.get('/new', choresCtrl.new)
 router.get('/:id', choresCtrl.show)
 router.get('/:id', choresCtrl.show)
 
-
 router.post('/', choresCtrl.create)
+
+router.delete('/:id', choresCtrl.delete)
 
 
 

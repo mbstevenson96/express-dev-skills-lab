@@ -44,6 +44,16 @@ function show(req, res) {
   })
 }
 
+function deleteChore(req, res) {
+  Chore.findByIdAndDelete(req.params.id)
+  .then(chore => {
+    res.redirect('/chores')
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/')
+  })
+}
 
 
 
@@ -52,4 +62,5 @@ export {
   newChore as new,
   create,
   show,
+  deleteChore as delete,
 }
