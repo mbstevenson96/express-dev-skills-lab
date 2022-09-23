@@ -5,7 +5,8 @@ function index(req, res) {
   Chore.find({})
   .then(chores => {
     res.render('chores/index', {
-      chores: chores
+      chores: chores,
+      time: req.time
     })
   })
   .catch(error => {
